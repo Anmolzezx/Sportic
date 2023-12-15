@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title> Sports Website </title>
 
+
+
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +18,7 @@
 
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/f8b3ef0406.js" crossorigin="anonymous"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <!-- Bootstrap Scripts -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -35,18 +37,21 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#testimonials">Explore</a>
+                <a class="nav-link" href="#testimonials">Explore</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#cta">Download</a>
+                <a class="nav-link" href="#cta">Download</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="#contact">Contact</a>
             </li>
-          </ul>
+        </ul>
+        
         </div>
       </nav>
       </div>
+
+      
 </section>
 
 <!-- First Section -->
@@ -137,7 +142,7 @@ International Olympic Committee also having discussed their inclusion into futur
         
         <div class="carousel-item active container-fluid">
           <h2 class="testimonial-text">Fortnite isn't just a game, it's a way of life.</h2>
-          <img class="testimonial-image" src="peakpx-modified.png" alt="lady-profile">
+          <img class="testimonial-image" src="peakpx-modified.webp" alt="lady-profile">
         </div>
         <div class="carousel-item  container-fluid">
             <h2 class="testimonial-text">Valorant: Where Every Play Unleashes the Extraordinary.</h2>
@@ -162,39 +167,41 @@ International Olympic Committee also having discussed their inclusion into futur
         <div class="container-fluid">
             <h3 class="big-heading">"Level up your gaming experience – download Sportic, 
                 where every update is a victory in the world of gaming and e-sport news."</h3>
-            <button type="button" class="btn btn-dark btn-lg download-button"><i class="fa-brands fa-apple"></i>Download</button>
-            <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa-brands fa-google-play">
+            <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa-brands fa-apple"></i>Download</button>
+            <br>  <br><button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fa-brands fa-google-play">
             </i>Download</button>
         </div>
     </section>
 
     <section id="contact">
-        <div class="container">
-            <h2 class="text-center">Contact Us</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="phone" placeholder="Enter Your Phone">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" placeholder="Enter Your Email">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" id="text" rows="5" placeholder="Elaborate your concern"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-dark">Submit</button>
-                    </form>
-                </div>
-            </div>
+      <div class="container">
+        <h2 class="text-center">Contact Us</h2>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone" required>
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Enter Your Email" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" id="text" rows="5" placeholder="Elaborate your concern" required></textarea>
+              </div>
+              <button type="button" class="btn btn-dark" onclick="submitForm()">Submit</button>
+              
+            </form>
+          </div>
         </div>
+      </div>
     </section>
     
 
   <script src="index.js"></script>
+  
 </body>
 
   <footer id="footer">

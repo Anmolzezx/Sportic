@@ -9,14 +9,21 @@ h1,h2,h3,h4,h5,h6 {
 /* Navigation Styles */
 .navbar {
     padding-bottom: 0 0 4.5rem;
+    font-size: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255);
 }
 .nav-item{
     padding: 0 18px;
+    font-size: 10px;
 
 }
 .nav-link {
-    font-size: 1.2rem;
+    font-size: 22px;
     font-family: "Montserrat-Light";
+    color: #fff;
 
 }
 .navbar-brand {
@@ -38,9 +45,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .testimonial-image {
-    width: 20%;
-    border-radius: 10%;
-    margin: 6px;
+    height: 200px;
+    /* border-radius: 10%; */
+    /* margin: 6px; */
 }
 
 #testimonials {
@@ -60,9 +67,9 @@ h1,h2,h3,h4,h5,h6 {
     background: #555;
 }
 
-.secondHalf {
+/* .secondHalf {
     flex: 1;
-}
+} */
 
 /* Section Styles */
 .section {
@@ -89,17 +96,17 @@ h1,h2,h3,h4,h5,h6 {
     background-color: #e6e5a7;
 }
 
-.sectiontag {
+/* .sectiontag {
     font-size: 32px;
     font-weight: bold;
-}
+} */
 
 .sectionSubtag {
     font-size: 18px;
 }
-.section3 {
+/* .section3 {
     text-align: left;
-}
+} */
 
 .thumbnail {
     flex: 1;
@@ -139,10 +146,6 @@ h1,h2,h3,h4,h5,h6 {
     border-radius: 10px;
 }
 
-h2 {
-    color: #343a40;
-}
-
 .form {
     margin-top: 20px;
 }
@@ -153,7 +156,7 @@ h2 {
 
 .btn-dark {
     background-color: #343a40;
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 .btn-dark:hover {
@@ -163,3 +166,50 @@ h2 {
     background-color: #a5a94a;
     padding: 1% 1%;
 }
+
+/* beta */
+
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-item::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item:hover::before {
+    width: 100%;
+    left: 0;
+}
+.btn-dark:hover {
+    transform: scale(1.1);
+  }
+.thumbnail img {
+  transition: transform 0.4s ease-in-out;
+}
+
+.thumbnail:hover img {
+  transform: scale(1.2);
+}
+#fa-brands fa-apple{
+margin-top: 100px;
+margin-bottom: 100px;
+}
+
+
+.testimonial-image {
+    transition: transform 0.4s ease-in-out;
+  }
+.testimonial-image:hover {
+    /* Define the desired animation here */
+    transform: scale(1.1); /* Slightly zoom in on hover */
+   
+  }
+  

@@ -1,18 +1,20 @@
-
-    document.addEventListener('DOMContentLoaded', function () {
-        // Form submission event listener
-        document.querySelector('.form').addEventListener('submit', function (event) {
-            // Get form inputs
-            const nameInput = document.getElementById('name');
-            const phoneInput = document.getElementById('phone');
-            const emailInput = document.getElementById('email');
-            const textAreaInput = document.getElementById('text');
-
-            // Check if any field is empty
-            if (!nameInput.value || !phoneInput.value || !emailInput.value || !textAreaInput.value) {
-                alert('Please fill in all fields.');
-                event.preventDefault(); // Prevent form submission
-            }
-        });
-    });
-
+function submitForm() {
+    // Get form values
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var email = document.getElementById('email').value;
+    var text = document.getElementById('text').value;
+  
+    // Perform form validation (you can add more validation as needed)
+    if (!name || !phone || !email || !text) {
+      alert('Please fill in all fields');
+      return;
+    }
+  
+    // Perform form submission (you can replace this with your own logic)
+    alert('Form submitted successfully!');
+  
+    // Reset the form after submission
+    document.getElementById('contactForm').reset();
+  }
+  
